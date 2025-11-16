@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block pageinfo %}
+<p class="pageinfo text">Soundboard. Click buttons to play sounds.</p>
+{% endblock %}
+
+{% block content %}
+<div class="gridcontainer">
+    <div class="grid">
+        {% for file in files %}
+        <a class="rect" href="play?filename={{file[0]}}" data-filename="{{file[0]}}">
+            {{ file[1][0] }}
+        </a>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    document.querySelectorAll('.rect').forEach(function (rect) {
+        rect.addEventListener('click', function (e) {
+            e.preventDefault();
+            const filename = rect.getAttribute('data-filename');
+            fetch(`/play?filename=${encodeURIComponent(filename)}`)
+                .then(response => {
+                    if (!response.ok) {
+                        alert('Error playing sound: ' + filename);
+                    }
+                });
+        });
+    });
+</script>
+{% endblock %}

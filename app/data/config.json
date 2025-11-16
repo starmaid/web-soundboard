@@ -1,0 +1,6 @@
+{
+    "hostname": "none",
+    "flaskport": 2222,
+    "debug": true,
+    "usegit": false
+}

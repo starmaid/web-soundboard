@@ -1,0 +1,12 @@
+
+api_key.sh
+
+*.wav
+
+.vscode/
+__pycache__/
+dist/
+.coverage*
+htmlcov/
+.tox/
+docs/_build/

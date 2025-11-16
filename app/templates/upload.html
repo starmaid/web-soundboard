@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block pageinfo %}
+<p class="pageinfo text">Paste a youtube link here to add to soundboard</p>
+{% endblock %}
+
+{% block content %}
+<div class="ctextcontainer">
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="text" name="videolink" id="videolink"><br>
+    <button type="submit">Get</button>
+</form>
+</div>
+{% endblock %}

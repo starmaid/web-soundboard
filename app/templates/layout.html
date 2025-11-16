@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+  <div class="box">
+    <div class="row header">
+      <div class="menu">
+        <div class="li"><a href="{{ url_for('index') }}">Home</a></div>
+        <div class="li"><a href="{{ url_for('board') }}">Soundboard</a></div>
+        <div class="li"><a href="{{ url_for('upload') }}">Upload</a></div>
+        <div class="li"><a href="{{ url_for('info') }}">Info</a></div>
+      </div>
+    </div>
+    <div class="row content">
+      <div class="pageinfo">
+        {% block pageinfo %}
+        {% endblock %}
+      </div>
+      <div class="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+  <div class="ctextcontainer">
+    <p>Created by <a href="http://github.com/starmaid">starmaid</a></p>
+  </div>
+</body>
+
+</html>

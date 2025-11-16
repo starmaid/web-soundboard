@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block pageinfo %}
+<p class="pageinfo text">Info page.</p>
+{% endblock %}
+
+{% block content %}
+<div class="ctextcontainer">
+  <h2>Web Soundboard</h2>
+  <p>{{ version }}</p>
+  <p>hostname: {{ hostname }}</p>
+</div>
+{% endblock %}

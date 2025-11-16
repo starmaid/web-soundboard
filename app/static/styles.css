@@ -1,0 +1,232 @@
+@font-face {
+    font-family: RubikGlitch;
+    src: url(RubikGlitch-Regular.ttf);
+}
+
+@font-face {
+    font-family: TitilliumWeb;
+    src: url(TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: TitilliumWeb;
+    src: url(TitilliumWeb-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: VT323;
+    src: url(VT323-Regular.ttf);
+}
+
+p {
+    font-family: VT323;
+    color: black;
+    font-size: 2rem;
+}
+
+a {
+    font-family: VT323;
+    color: #57003b;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: VT323;
+    color: black;
+    font-size: 3rem;
+}
+
+label {
+    font-family: DMSerifText-Regular;
+    color: black
+}
+
+input {
+    font-family: DMSerifText-Regular;
+    color: #ff00ae
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.imggallery {
+    object-fit: cover;
+    width: 70%;
+    max-height: 70%;
+}
+
+.logo {
+    font-family: DMSerifText-Regular;
+    font-size: 4rem;
+    text-align: left;
+    height: fit-content;
+    margin: 0.5rem;
+    color: black;
+}
+
+.menu {
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.li {
+    flex: 1 1 auto;
+    flex-flow: row;
+    width: 25%;
+    height: min-content;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.pageinfo {
+    align-items: center;
+    margin: 0;
+}
+
+.pageinfo.text {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.parent {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    flex: 1 1 auto;
+    margin-top: 0%;
+    margin-right: 1%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 25%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.right {
+    flex: auto;
+    margin-top: 0%;
+    margin-right: 5%;
+    margin-left: 1%;
+    margin-bottom: 5%;
+    width: 55%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.ctextcontainer {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.textcontainer {
+    flex: 1 1 auto;
+    margin: 10%;
+    text-align: left;
+}
+
+.gallerycontainer {
+    flex: 1 1 auto;
+    margin: 10%;
+    text-align: center;
+}
+
+html,
+body {
+    height: 95%;
+    margin: 0;
+    background-color: rgb(165, 125, 167);
+}
+
+.box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.box .row {
+    border: 1px dotted #d3d6ff;
+}
+
+.box .row.header {
+    flex: 0 1 auto;
+}
+
+.box .row.content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: auto
+}
+
+.box .row.footer {
+    flex: 0 1 40px;
+}
+
+.gridcontainer {
+    flex: 1 1 auto;
+    margin: 3%;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.rect {
+    background: #00fff2;
+    border: 1px solid #000000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: black;
+    font-family: VT323;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.rect:hover {
+    background: #9a5bff;
+}
+
+.frame-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}

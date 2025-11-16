@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Last 100 lines of stdout</h2>
+<div style="background:#222; color:#eee; padding:1em; border-radius:8px;">
+    <pre>{{ logs|e }}</pre>
+</div>
+{% endblock %}
